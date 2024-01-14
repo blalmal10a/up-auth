@@ -19,11 +19,12 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'bd',
             'username' => 'bd',
+            'project_id' => 1,
             'email' => 'bd@technology.com',
             'password' => bcrypt('Kurkur3;'),
         ]);
         Project::create([
-            'name' => 'Project 1',
+            'name' => 'BD Technology',
             'code' => 1,
             'phone' => 1,
             'email' => 'first@project',
