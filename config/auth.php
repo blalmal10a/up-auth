@@ -35,10 +35,17 @@ return [
     |
     */
 
+    // 'guards' => [
+    //     'web' => [
+    //         'driver' => 'session',
+    //         'provider' => 'users',
+    //     ],
+    // ],
+
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'projects',
         ],
     ],
 
@@ -59,10 +66,27 @@ return [
     |
     */
 
+    // 'providers' => [
+    //     'users' => [
+    //         'driver' => 'eloquent',
+    //         'model' => App\Models\User::class,
+    //     ],
+
+    //     // 'users' => [
+    //     //     'driver' => 'database',
+    //     //     'table' => 'users',
+    //     // ],
+    // ],
+
     'providers' => [
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'projects' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Project::class,
         ],
 
         // 'users' => [
@@ -93,6 +117,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'projects' => [
+            'provider' => 'projects',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,

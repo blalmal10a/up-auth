@@ -2,7 +2,8 @@
 
 namespace App\Actions\Fortify;
 
-use App\Models\User;
+use App\Models\Project;
+// use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
@@ -17,18 +18,20 @@ class CreateNewUser implements CreatesNewUsers
      *
      * @param  array<string, string>  $input
      */
-    public function create(array $input): User
+    public function create(array $input): Project
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'max:10', 'min:10'],
+            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
-        return User::create([
+        return Project::create([
             'name' => $input['name'],
-            'email' => $input['email'],
+            'phone' => $input['phone'],
+            // 'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
     }
