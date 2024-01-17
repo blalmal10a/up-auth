@@ -3,8 +3,10 @@
 namespace App\Http\Requests;
 
 use App\Models\Project;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class StoreUserRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class StoreUserRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
         // $user = request()->user();
         // if ($user instanceof Project) return true;
         // else return false;
@@ -27,7 +29,14 @@ class StoreUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'username' => [
+                'required',
+                Rule::unique('users')->where(
+                    fn ($user) => $user->where('project_id', request()->user()->id)
+                )
+            ],
+
+            'password' => 'required|confirmed',
         ];
     }
 }

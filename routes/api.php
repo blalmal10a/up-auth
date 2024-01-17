@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin-api']], function () {
-    Route::post('users', [UserController::class, 'store']);
+Route::group(['middleware' => ['auth:admin-api']], function () {
+    Route::post('register', [UserController::class, 'store']);
+    Route::post('login', [UserController::class, 'login']);
 });
 
 Route::apiResource('users', UserController::class)->except('store')->middleware([
