@@ -41,8 +41,8 @@
             Username Password Auth is an Authentication as a Service
         </h1>
         <div class="px-3 md:px-16 lg:px-24 ">
-            <h3 class="mt-3 text-xl text-center">It aims on a simple authentication service, an app anyone can
-                integrate.</h3>
+            <h3 class="mt-3 text-xl text-center">The objective is to provide a simple and easy to integrate,
+                username/password authentication service.</h3>
             <h3 class="mt-16 text-xl">MOTIVATION</h3>
             <p>I once try to implement an SPA with extremely simple authentication, but i cannot find any Auth service
                 with
@@ -53,15 +53,35 @@
             <p>And i cannot find one which provider username, password authentication</p>
             <p>This auth service will provide exactly what I've wanted!</p>
 
-            <h3 class="mt-5 text-xl">DETAIL FEATURES</h3>
+            <h3 class="mt-5 text-xl">INTEGRATION</h3>
             <ol>
-                <li>registration using a unique username and password</li>
+                <li>Register your project</li>
+                <li>Generate an api key</li>
+                <li>This token will be used to register a new user to your app</li>
+
+                <li>Pass the token as Authorization Bearer (when a new user is being created)</li>
+                <li>Payload for user registration requries the following fields:
+                    <ol class="pl-3">
+                        <li> 1. username</li>
+                        <li> 2. password</li>
+                        <li>3. password_confirmation</li>
+                    </ol>
+                </li>
+                <li>VIOLA. A new user has been created.</li>
+                <li>The user can now logged in using the credentials provided</li>
+                <li>A plain text token will be returned on authentication</li>
+                <li>Save the token in locastorage.</li>
+                <li>The token will be necessary to fetch/update user's data</li>
+                {{-- <li>registration using a unique username and password</li>
                 <li>update username</li>
-                <li>update password</li>
+                <li>update password</li> --}}
             </ol>
             <h3 class="mt-5 text-xl">WHAT GOES AROUND COMES AROUND</h3>
-            Feel free to clone and use the project your own. It is okay to upgrade and for commercial usage, nothing is
-            prohibited on my side. No credit required
+            <div class="pb-5">
+                Feel free to clone and use the project your own. It is okay to upgrade and for commercial usage, nothing
+                is
+                prohibited on my side. No credit required
+            </div>
         </div>
         <div class="absolute bottom-0 right-0 p-3">
             <a href="https://github.com/blalmal10a/up-auth" target="_blank">
