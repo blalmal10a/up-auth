@@ -52,30 +52,136 @@
                 some.</p>
             <p>And i cannot find one which provider username, password authentication</p>
             <p>This auth service will provide exactly what I've wanted!</p>
+            <h3 class="mt-5 text-xl">HOW TO USE</h3>
 
-            <h3 class="mt-5 text-xl">INTEGRATION</h3>
+            <div class="">
+
+                <div class="flex -mx-2 flex-wrap ">
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="bg-gray-400">
+                            <h5 class="text-lg text-center">INTRODUCTION</h5>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>- Register your project</li>
+                                <li>- Generate a token</li>
+                                <li>- Keep the token safe</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="">
+                            <h5 class="bg-gray-400 text-lg text-center">REGISTRATION</h5>
+
+                        </div>
+                        <div>
+                            <ul>
+                                <li>- endpoint[POST]: <code>/api/register</code></li>
+                                <li>- Authorization Bearer token is required</li>
+                                <li>- requried form_fields:
+                                    <ol class="pl-7">
+                                        <li>username</li>
+                                        <li>password</li>
+                                        <li>password_confirmation</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="bg-gray-500">
+                            <h5 class="text-lg text-center">AUTHENTICATION</h5>
+                        </div>
+                        <div>
+                            <ol>
+                                <li>- endpoint[POST]: /api/login</li>
+                                <li>- Authorization Bearer token is required</li>
+                                <li>- requried form_fields:
+                                    <ol class="pl-7">
+                                        <li>username</li>
+                                        <li>password</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    - [RESPONSE]: Plain Text Token for the authorized user will be returned
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="bg-gray-400">
+                            <h5 class="text-center text-lg">
+                                UTILIZATION
+                            </h5>
+                        </div>
+                        <div>
+                            <ol>
+                                <li>- endpoint: [GET]: /api/user</li>
+                                <li>- Authorization Bearer token is required</li>
+                                <li>- Authorized user details will be returned</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="bg-gray-400">
+                            <h5 class="text-center text-lg">
+                                MANIPULATION
+                            </h5>
+                        </div>
+                        <div>
+                            <ol>
+                                <li>- endpoint: [GET]: /api/users/<i
+                                        class="text-green-500 font-extrabold font-mono">USER_ID</i>
+                                </li>
+                                <li>- Authorization Bearer token is required</li>
+                                <li>- [RESPONSE]Authorized user details will be returned</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class=" w-full lg:w-1/2  p-2">
+                        <div class="bg-gray-400">
+                            <h5 class="text-center text-lg">
+                                DESTRUCTION
+                            </h5>
+                        </div>
+                        <div>
+                            <ol>
+                                <li>- endpoint: [DELETE]: /api/users/<i
+                                        class="text-green-500 font-extrabold font-mono">USER_ID</i>
+                                </li>
+                                <li>- Authorization Bearer token is required</li>
+                                <li>- The utilization of any resource related to the user will no longer be available.
+                                </li>
+                                {{-- <li>- [RESPONSE]Authorized user details will be returned</li> --}}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- <h3 class="mt-5 text-xl">INTEGRATION</h3>
             <ol>
-                <li>Register your project</li>
-                <li>Generate an api key</li>
-                <li>This token will be used to register a new user to your app</li>
+                <li>- Register your project</li>
+                <li>- Generate an api key</li>
+                <li>- This token will be used to register a new user to your app</li>
 
-                <li>Pass the token as Authorization Bearer (when a new user is being created)</li>
-                <li>Payload for user registration requries the following fields:
+                <li>- Pass the token as Authorization Bearer (when a new user is being created)</li>
+                <li>- Payload for user registration requries the following fields:
                     <ol class="pl-3">
-                        <li> 1. username</li>
-                        <li> 2. password</li>
-                        <li>3. password_confirmation</li>
+                        <li>-  1. username</li>
+                        <li>-  2. password</li>
+                        <li>- 3. password_confirmation</li>
                     </ol>
                 </li>
-                <li>VIOLA. A new user has been created.</li>
-                <li>The user can now logged in using the credentials provided</li>
-                <li>A plain text token will be returned on authentication</li>
-                <li>Save the token in locastorage.</li>
-                <li>The token will be necessary to fetch/update user's data</li>
-                {{-- <li>registration using a unique username and password</li>
-                <li>update username</li>
-                <li>update password</li> --}}
-            </ol>
+                <li>- VIOLA. A new user has been created.</li>
+                <li>- The user can now logged in using the credentials provided</li>
+                <li>- A plain text token will be returned on authentication</li>
+                <li>- Save the token in locastorage.</li>
+                <li>- The token will be necessary to fetch/update user's data</li>
+            </ol> --}}
             <h3 class="mt-5 text-xl">WHAT GOES AROUND COMES AROUND</h3>
             <div class="pb-5">
                 Feel free to clone and use the project your own. It is okay to upgrade and for commercial usage, nothing
@@ -83,7 +189,7 @@
                 prohibited on my side. No credit required
             </div>
         </div>
-        <div class="absolute bottom-0 right-0 p-3">
+        <div class="fixed bottom-0 right-0 p-3">
             <a href="https://github.com/blalmal10a/up-auth" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48px" height="48px">
                     <linearGradient id="KpzH_ttTMIjq8dhx1zD2pa" x1="30.999" x2="30.999" y1="16"
