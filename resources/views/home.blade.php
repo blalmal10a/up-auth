@@ -58,7 +58,7 @@
 
                 <div class="flex -mx-2 flex-wrap ">
                     <div class=" w-full lg:w-1/2  p-2">
-                        <div class="bg-gray-400">
+                        <div class="bg-gray-500">
                             <h5 class="text-lg text-center">INTRODUCTION</h5>
                         </div>
                         <div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class=" w-full lg:w-1/2  p-2">
                         <div class="">
-                            <h5 class="bg-gray-400 text-lg text-center">REGISTRATION</h5>
+                            <h5 class="bg-gray-500 text-lg text-center">REGISTRATION</h5>
 
                         </div>
                         <div>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class=" w-full lg:w-1/2  p-2">
-                        <div class="bg-gray-400">
+                        <div class="bg-gray-500">
                             <h5 class="text-center text-lg">
                                 UTILIZATION
                             </h5>
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class=" w-full lg:w-1/2  p-2">
-                        <div class="bg-gray-400">
+                        <div class="bg-gray-500">
                             <h5 class="text-center text-lg">
                                 MANIPULATION
                             </h5>
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class=" w-full lg:w-1/2  p-2">
-                        <div class="bg-gray-400">
+                        <div class="bg-gray-500">
                             <h5 class="text-center text-lg">
                                 DESTRUCTION
                             </h5>
